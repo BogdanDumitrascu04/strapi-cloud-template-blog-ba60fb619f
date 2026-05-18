@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pages",
+  "info": {
+    "singularName": "page",
+    "pluralName": "pages",
+    "displayName": "Page",
+    "description": "Static pages (Contact, Terms, etc.)"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "cover": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images", "files", "videos"]
+    },
+    "address": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "mapEmbed": {
+      "type": "text"
+    },
+    "hours": {
+      "type": "json"
+    },
+    "social": {
+      "type": "json"
+    },
+    "blocks": {
+      "type": "dynamiczone",
+      "components": ["shared.media", "shared.quote", "shared.rich-text", "shared.slider"]
+    }
+  }
+}
